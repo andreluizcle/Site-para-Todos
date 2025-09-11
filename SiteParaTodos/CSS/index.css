@@ -70,7 +70,7 @@
     align-items: center;
     justify-content: center;
 
-    background-color: #FCBF0E;
+    background-color: #FF013A;
     border-radius: 20px;
 
     font-family: 'Fredoka';
@@ -201,39 +201,4 @@
     width: 100%;
     height: 100%;
     border-radius: 20px;
-}
-
-footer{
-    height: 150px;
-    background-color: #00296B;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #FFFCF6;
-}
-
-.align-footer{
-    display: flex;
-    width: 80%;
-    justify-content: space-between;
-}
-
-.contato-localizacao{
-    margin-top: 10px;
-}
-
-.contato-localizacao ul li{
-    display: flex;
-}
-
-.contato-localizacao ul li img{
-    width: 19px;
-    height: 19px;
-    margin-right: 10px;
-}
-
-.desc-footer{
-    font-family: 'Nunito';
-    font-weight: bold;
-    font-size: 14px;
 }
