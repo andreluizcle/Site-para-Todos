@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+.align {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.title {
+    font-size: 38px;
+    font-family: 'Fredoka';
+    font-weight: 700;
+    text-align: center;
+    line-height: 45px;
+    color: #00296B;
+}
+
+.subtitle {
+    font-size: 26px;
+    color: #EDA900;
+    font-family: 'Fredoka';
+    font-weight: 700;
+}
+
+.text {
+    font-size: 17px;
+    font-family: 'Nunito';
+    font-weight: 700;
+    text-align: center;
+    color: #00296B;
+    text-align: justify;
+    margin-top: 15px;
+}
+
+.fundo {
+    background-image: url("../images/Vector\ 187.png");
+    height: 382px;
+    width: 949px;
+    margin-left: auto;
+    margin-right: auto;
+    flex-direction: column;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+.btn-conhecer a {
+    color: white;
+    border-radius: 20px;
+
+    padding-left: 25px;
+    padding-right: 24px;
+    padding-top: 8px;
+    padding-bottom: 9px;
+    margin-left: -28px;
+
+    text-decoration: none;
+}
+
+.btn-conhecer a:hover {
+    opacity: 1;
+    color: white;
+    transition: 0.5s;
+}
+
+.btn-conhecer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: #FF013A;
+    border-radius: 20px;
+
+    font-family: 'Fredoka';
+    font-weight: bold;
+
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 26.5px;
+
+    margin-top: 25px;
+
+    width: 224px;
+    height: 43px;
+}
+
+/* =============================================================
+   --- Media Query (Telas Pequenas) ---
+============================================================= */
+
+@media (max-width: 768px) {
+
+    /* --- GERAL --- */
+    body {
+        overflow-x: hidden;
+    }
+
+    .title {
+        font-size: 30px;
+        /* Reduz o título */
+        line-height: 1.2;
+    }
+
+    /* --- SEÇÃO 1 (Principal) --- */
+    /* Alvo: <div class="align" style="justify-content: space-evenly..."> */
+    /* Empilha o bloco de imagem e texto, e inverte a ordem */
+    .align[style*="justify-content: space-evenly"] {
+        flex-direction: column-reverse;
+        /* Coloca o texto ANTES da imagem */
+        padding: 0 20px;
+        gap: 30px;
+        margin-top: 30px;
+    }
+
+    /* Ajusta a imagem */
+    .align[style*="justify-content: space-evenly"] img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    /* --- Anulação de Larguras (Seção 1) --- */
+    /* Usamos !important para anular o style="..." do HTML */
+
+    p.title[style*="width: 546px"],
+    p.text[style*="width: 546px"] {
+        width: 100% !important;
+    }
+
+    /* Centraliza o título que teve a largura anulada */
+    p.title[style*="width: 546px"] {
+        text-align: center !important;
+    }
+
+    /* Altera o alinhamento da descrição */
+    p.text[style*="width: 546px"] {
+        text-align: left !important;
+    }
+
+    /* Ajusta o container da lista */
+    div[style*="width: 526px"] {
+        width: 100% !important;
+        margin-left: 0 !important;
+    }
+
+    /* Ajusta o alinhamento da lista de vagas */
+    div[style*="width: 526px"]>ul.text {
+        text-align: left !important;
+    }
+
+
+    /* --- SEÇÃO 2 (Formulário) --- */
+    .fundo {
+        width: 90% !important;
+        /* Anula o 'width: 949px' */
+        height: auto !important;
+        /* Anula o 'height: 382px' */
+        margin-top: 50px;
+        margin-bottom: 50px;
+        padding: 40px 20px;
+        /* Adiciona padding interno */
+        background-size: cover;
+        /* Cobre o container */
+        background-position: center;
+        /* Centraliza o fundo */
+    }
+
+    /* Anula a largura do texto do formulário */
+    .fundo p.text[style*="width: 608px"] {
+        width: 100% !important;
+        /* O text-align: center do HTML já vai funcionar */
+    }
+
+    /* O botão .btn-conhecer já irá centralizar
+       pois .fundo é um flex-column com 'align-items: center' */
+}

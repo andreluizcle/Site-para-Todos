@@ -1,0 +1,227 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+.align {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.title {
+    font-size: 38px;
+    font-family: 'Fredoka';
+    font-weight: 700;
+    text-align: center;
+    line-height: 45px;
+    color: #00296B;
+}
+
+.subtitle {
+    font-size: 26px;
+    color: #EDA900;
+    font-family: 'Fredoka';
+    font-weight: 700;
+}
+
+.text {
+    font-size: 17px;
+    font-family: 'Nunito';
+    font-weight: 700;
+    text-align: center;
+    color: #00296B;
+    text-align: justify;
+    margin-top: 15px;
+}
+
+.item {
+    display: flex;
+    width: 462px;
+}
+
+.icon {
+    display: flex;
+    align-items: center;
+}
+
+.text-item {
+    margin-left: 20px;
+}
+
+.img-size {
+    height: 200px;
+    width: 200px;
+    border-radius: 18px;
+    transition: 0.8s;
+}
+
+.img-size:hover {
+    transition: 0.8s;
+    height: 300px;
+    width: 300px;
+}
+
+.btn-conhecer a {
+    color: white;
+    border-radius: 20px;
+
+    padding-left: 25px;
+    padding-right: 24px;
+    padding-top: 8px;
+    padding-bottom: 9px;
+    margin-left: -28px;
+
+    text-decoration: none;
+}
+
+.btn-conhecer a:hover {
+    opacity: 1;
+    color: white;
+    transition: 0.5s;
+}
+
+.btn-conhecer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: #FF013A;
+    border-radius: 20px;
+
+    font-family: 'Fredoka';
+    font-weight: bold;
+
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 26.5px;
+
+    width: 224px;
+    height: 43px;
+}
+
+/* =============================================================
+   --- Media Query para Contato (Telas Pequenas) ---
+============================================================= */
+
+@media (max-width: 768px) {
+
+    /* --- GERAL --- */
+    body {
+        overflow-x: hidden;
+        /* Previne rolagem horizontal */
+    }
+
+    .title {
+        font-size: 30px;
+        /* Reduz o título */
+        line-height: 1.2;
+    }
+
+    .text {
+        text-align: left;
+        /* 'Justify' fica ruim em telas pequenas */
+    }
+
+    /* --- PADRÃO DE LAYOUT (Mobile) --- */
+    /* ta aplicando 'empilhamento' (column) a todos os .align
+      que estão sendo usados 
+    */
+    .align[style*="space-evenly"] {
+        flex-direction: column;
+        gap: 30px;
+        padding: 0 20px;
+    }
+
+    /* Ajusta o bloco de 'redes sociais' que já era column */
+    .align[style*="flex-direction: column"] {
+        padding: 0 20px;
+    }
+
+    /* --- SEÇÃO 2 (Mapa): Inverte a ordem */
+    /* Alvo: <div class="align" style="margin-top: 100px; justify-content: space-evenly;"> */
+    /* Coloca o mapa DEPOIS do texto no mobile */
+    .align[style*="margin-top: 100px"][style*="space-evenly"] {
+        flex-direction: column-reverse;
+    }
+
+    /* --- LARGURAS (Anulando !important) --- */
+    /* Remove todas as larguras fixas dos parágrafos de texto */
+    /* Usamos !important para anular o style="..." do HTML */
+    p[style*="width: 546px"],
+    p[style*="width: 526px"],
+    p[style*="width: 608px"] {
+        width: 100% !important;
+    }
+
+    /* Centraliza os títulos */
+    .title[style*="width: 546px"],
+    .title[style*="width: 526px"] {
+        text-align: center !important;
+    }
+
+    /* Centraliza o texto de redes sociais */
+    p[style*="width: 608px"] {
+        text-align: center !important;
+    }
+
+    /* --- ELEMENTOS ESPECÍFICOS --- */
+
+    /* Imagem da Seção 1 */
+    .align[style*="margin-top: 50px"] img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    /* Itens de Localização/Horário */
+    .item {
+        width: 100%;
+        /* Era 462px */
+    }
+
+    /* Mapa */
+    iframe {
+        width: 100% !important;
+        /* Anula o width="446" do HTML */
+        height: 300px !important;
+    }
+
+    /* --- GALERIA DE IMAGENS --- */
+    /* Alvo: Os .align que contêm as .img-size.
+      Eles precisam ser 'row' (para ter colunas) e 'wrap' (para quebrar a linha)
+    */
+    .align[style*="justify-content: space-evenly"][style*="margin-top: 50px"] {
+        flex-direction: row;
+        /* Sobrescreve o 'column' que definimos antes */
+        flex-wrap: wrap;
+        /* FAZ AS IMAGENS QUEBRAREM A LINHA */
+        gap: 10px;
+        padding: 0 10px;
+        margin-top: 30px;
+    }
+
+    .img-size {
+        width: 48%;
+        /* Cria uma grade de 2 colunas */
+        height: 150px;
+        object-fit: cover;
+        /* Garante que a imagem cubra sem distorcer */
+        margin: 0;
+        transition: none;
+        /* Remove a transição de hover */
+    }
+
+    /* Desativa o efeito de hover no mobile */
+    .img-size:hover {
+        height: 150px;
+        width: 48%;
+        transform: none;
+        transition: none;
+    }
+
+    /* --- BOTÃO FINAL --- */
+    .align[style*="margin-bottom: 100px"] {
+        margin-top: 30px;
+        margin-bottom: 50px;
+        /* Reduz a margem */
+    }
+}

@@ -1,0 +1,395 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+.banner {
+    background-image: url("../images/bg_banner.png");
+    height: 514px;
+    display: flex;
+    align-items: center;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+.text-banner {
+    margin-left: 10%;
+    width: 555px;
+    color: white;
+}
+
+.escola {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 112px;
+}
+
+.text-escola {
+    margin-left: 10%;
+    width: 555px;
+}
+
+.title {
+    font-size: 36px;
+    line-height: 45px;
+    font-weight: bold;
+    color: #00296B;
+    font-family: 'Fredoka';
+}
+
+.desc {
+    font-weight: 700;
+    font-size: 17px;
+    line-height: 100%;
+    margin-top: 20px;
+    color: #00296B;
+    font-family: 'Nunito';
+}
+
+.btn .btn-historia {
+    margin: auto;
+    margin-top: 20px;
+}
+
+.btn-historia a {
+    color: white;
+    border-radius: 20px;
+    padding-left: 25px;
+    padding-right: 24px;
+    padding-top: 8px;
+    padding-bottom: 9px;
+    margin-left: -28px;
+
+    text-decoration: none;
+}
+
+.btn-historia a:hover {
+    opacity: 1;
+    color: white;
+    transition: 0.5s;
+}
+
+.btn-historia {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: #FF013A;
+    border-radius: 20px;
+
+    font-family: 'Fredoka';
+    font-weight: bold;
+
+    margin-right: 90px;
+    margin-top: 30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 26.5px;
+
+    width: 224px;
+    height: 45px;
+}
+
+.text-aleatorio {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 90px;
+}
+
+.sistema-ensino {
+    display: flex;
+    justify-content: space-between;
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.item {
+    display: flex;
+}
+
+.icon {
+    display: flex;
+    align-items: center;
+}
+
+.text-item {
+    margin-left: 20px;
+}
+
+.valores {
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bubbles {
+    display: flex;
+    gap: 35px;
+}
+
+.educacao {
+    margin-top: -60px;
+    background-image: url("../images/bg_yellow_wave.png");
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding-left: 250px;
+    padding-right: 250px;
+    padding-top: 75px;
+    padding-bottom: 30px;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+
+.card {
+    background-color: white;
+    border-radius: 10px;
+    width: 317px;
+    padding-top: 75px;
+    margin-top: -70px;
+    padding-bottom: 10px;
+}
+
+.idade {
+    font-size: 18px;
+    font-weight: 400;
+    color: #EDA900;
+    text-align: center;
+}
+
+.lista {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.lista ul li {
+    display: flex;
+    padding: 8px;
+    justify-content: center;
+}
+
+.list-item-texto {
+    margin-left: 5px;
+    font-family: 'Nunito';
+    color: #00296B;
+    font-weight: bold;
+}
+
+.icon-infantil-fundamental {
+    display: flex;
+    justify-content: center;
+}
+
+.fotos-escola-matricula {
+    background-image: url("../images/bg_black_line.png");
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding-top: 20px;
+    padding-left: 10%;
+    padding-bottom: 20px;
+}
+
+.card {
+    margin-bottom: 100px;
+}
+
+.foto {
+    width: 221px;
+    height: 192px;
+}
+
+.foto img {
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+}
+
+
+.hamburger-icon {
+    display: none;
+    /* Escondido no desktop */
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 1001;
+}
+
+
+.hamburger-icon .bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    background-color: #00296B;
+    /* Cor principal do seu site */
+    transition: all 0.3s ease-in-out;
+}
+
+
+@media (max-width: 768px) {
+    body {
+        overflow-x: hidden;
+    }
+
+    .title {
+        font-size: 28px;
+        line-height: 1.2;
+    }
+
+    .desc {
+        font-size: 16px;
+    }
+
+    /* --- BANNER --- */
+    .banner {
+        height: auto;
+        padding: 40px 20px;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .text-banner {
+        width: 100%;
+        margin-left: 0;
+        text-align: center;
+    }
+
+    .text-banner p[style*="font-size: 38px"] {
+        font-size: 26px !important;
+        line-height: 1.3;
+    }
+
+    /* --- SEÇÃO ESCOLA --- */
+    .escola {
+        flex-direction: column;
+        margin-top: 50px;
+        padding: 0 20px;
+    }
+
+    .escola .img img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .text-escola {
+        width: 100%;
+        margin-left: 0;
+        margin-top: 20px;
+        text-align: center;
+    }
+
+    .matricula {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    /* --- TEXTO ALEATÓRIO --- */
+    .text-aleatorio {
+        padding: 0 20px;
+    }
+
+    /* --- SISTEMA DE ENSINO --- */
+    .sistema-ensino {
+        flex-direction: column;
+        width: 90%;
+        gap: 30px;
+        margin-top: 50px;
+    }
+
+    .item {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .text-item {
+        margin-left: 0;
+        margin-top: 10px;
+    }
+
+    /* --- VALORES (BUBBLES) --- */
+    .bubbles {
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 0 20px;
+    }
+
+    .valores div[style*="z-index: -1"] {
+        display: none;
+    }
+
+    /* --- SEÇÃO EDUCAÇÃO (Infantil e Fundamental) --- */
+    .educacao {
+        flex-direction: column;
+        padding: 75px 20px 30px;
+        gap: 50px;
+        background-size: cover;
+    }
+
+    .infos-infantil,
+    .infos-fundamental {
+        width: 95%;
+        max-width: 317px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .fundamental .infos-fundamental {
+        margin-top: -70px;
+    }
+
+    /* --- FOTOS MATRÍCULA --- */
+    .fotos-escola-matricula {
+        flex-direction: column;
+        padding: 20px 10px;
+        gap: 30px;
+    }
+
+    .fotos-escola-matricula div[style*="margin-left: -5%"] {
+        margin-left: 0 !important;
+    }
+
+    .fotos {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .foto {
+        width: 45% !important;
+        height: 150px !important;
+        margin: 5px !important;
+    }
+
+    .foto img {
+        object-fit: cover;
+    }
+
+    /* --- FOOTER (Rodapé) --- */
+    footer .align-footer {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 30px;
+
+        padding: 30px 20px;
+    }
+
+    .contato-localizacao ul li {
+        justify-content: center;
+    }
+
+    .navigation ul li:last-child {
+        margin-left: 0px;
+    }
+}

@@ -1,0 +1,285 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+.align {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.title {
+    font-size: 38px;
+    font-family: 'Fredoka';
+    font-weight: 700;
+    text-align: center;
+    line-height: 45px;
+    color: #00296B;
+}
+
+.subtitle {
+    font-size: 26px;
+    color: #EDA900;
+    font-family: 'Fredoka';
+    font-weight: 700;
+}
+
+.text {
+    font-size: 17px;
+    font-family: 'Nunito';
+    font-weight: 700;
+    text-align: center;
+    color: #00296B;
+    text-align: justify;
+    margin-top: 15px;
+}
+
+.banner {
+    background-image: url("../images/IMG-20250918-WA0003.jpg");
+    height: 514px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+.fundo {
+    background-image: url("../images/IMG-20250918-WA0004.jpg");
+    height: 614px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding-top: 150px;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+.text-banner {
+    display: flex;
+    width: 555px;
+    color: white;
+}
+
+/* The actual timeline (the vertical ruler) */
+.timeline {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* The actual timeline (the vertical ruler) */
+.timeline::after {
+    content: '';
+    position: absolute;
+    width: 10px;
+    background-color: #FF013A;
+    top: 0;
+    bottom: 0;
+    border-radius: 10px;
+}
+
+/* Container around content */
+.container {
+    padding: 0px 40px;
+    margin-top: 40px;
+    position: relative;
+    background-color: inherit;
+}
+
+/* The circles on the timeline */
+.container::after {
+    content: '1945';
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    width: 95px;
+    height: 95px;
+    margin-left: -33px;
+    background-color: #FCBF0E;
+    border: 4px solid #FCBF0E;
+    top: 15px;
+    border-radius: 50%;
+    z-index: 1;
+    font-size: 30px;
+    font-family: 'Fredoka';
+    font-weight: 700;
+    text-align: center;
+    line-height: 45px;
+}
+
+/* Add arrows to the right container (pointing left) */
+.right::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    left: 30px;
+    border: medium solid white;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent white transparent transparent;
+}
+
+/* Fix the circle for containers on the right side */
+.right::after {
+    left: -16px;
+}
+
+/* The actual content */
+.content {
+    padding: 20px 30px;
+    background-color: white;
+    position: relative;
+    border-radius: 6px;
+    width: 878px;
+}
+
+
+@media screen and (max-width: 600px) {
+
+    /* Place the timelime to the left */
+    .timeline::after {
+        left: 31px;
+    }
+
+    /* Full-width containers */
+    .container {
+        width: 100%;
+        padding-left: 70px;
+        padding-right: 25px;
+    }
+
+    /* Make sure that all arrows are pointing leftwards */
+    .container::before {
+        left: 60px;
+        border: medium solid white;
+        border-width: 10px 10px 10px 0;
+        border-color: transparent white transparent transparent;
+    }
+
+    /* Make sure all circles are at the same spot */
+    .left::after,
+    .right::after {
+        left: 15px;
+    }
+
+    /* Make all right containers behave like the left ones */
+    .right {
+        left: 0%;
+    }
+
+    /* --- ADIÇÃO: Correção de largura do conteúdo --- */
+    /* Ajusta o card de conteúdo para caber na tela */
+    .content {
+        width: 100%;
+        /* Era 878px */
+        padding: 15px 20px;
+    }
+
+    /* Ajusta o texto dentro do card (que tinha style inline) */
+    .content .text[style*="width: 878px"] {
+        width: 100% !important;
+        text-align: left;
+        /* 'justify' fica ruim em tela pequena */
+    }
+}
+
+/* =============================================================
+   --- NOVO: Media Query Principal (Telas de Tablet e Celular) ---
+============================================================= */
+@media screen and (max-width: 768px) {
+
+    .container::after {
+        width: 80px;
+        height: 80px;
+        left: 38px;
+    }
+
+    .timeline::after {
+        left: 45px;
+    }
+
+    /* --- GERAL --- */
+    .title {
+        font-size: 30px;
+        /* Reduz o título principal */
+    }
+
+    .subtitle {
+        font-size: 22px;
+        /* Reduz o subtítulo */
+    }
+
+    .text {
+        text-align: left;
+        /* Melhora a leitura em telas menores */
+    }
+
+    /* --- BANNER --- */
+    .banner {
+        height: auto;
+        /* Altura automática */
+        padding: 40px 20px;
+        background-size: cover;
+        /* Cobre a tela sem distorcer */
+        background-position: center;
+    }
+
+    .text-banner {
+        width: 100%;
+        flex-direction: column;
+        /* Empilha as imagens e o texto */
+        align-items: center;
+        gap: 20px;
+    }
+
+    /* --- BLOCO DE TEXTO PRINCIPAL --- */
+    /* !important para anular o 'width' inline do HTML */
+    div[style*="width: 1013px"] {
+        width: 90% !important;
+        /* Ajusta a largura */
+        margin-top: 50px;
+    }
+
+    /* --- FUNDO (Missão, Visão, Valores) --- */
+    .fundo {
+        flex-direction: column;
+        /* Empilha os 3 cards */
+        height: auto;
+        /* Altura automática */
+        background-size: cover;
+        background-position: center;
+        padding: 150px 20px 80px 20px;
+        /* Mais padding inferior */
+        gap: 120px;
+        /* Espaço entre os cards (considerando o -100px da imagem) */
+    }
+
+    /* Anula as larguras e alturas fixas dos cards */
+    .fundo>.align[style*="width: 311px"] {
+        width: 90% !important;
+        max-width: 311px;
+        /* Mantém um limite */
+        height: auto !important;
+        /* Altura automática */
+        padding-bottom: 30px !important;
+        /* Espaço extra */
+    }
+
+    /* --- LINHA DO TEMPO (Conteúdo) --- */
+    /* Ajusta o conteúdo da timeline para telas de tablet */
+    .content {
+        width: 100%;
+        padding: 15px 35px;
+        /* Remove a largura fixa de 878px */
+    }
+
+    /* Anula o style inline 'width: 878px' do parágrafo */
+    .content .text[style*="width: 878px"] {
+        width: 100% !important;
+    }
+}

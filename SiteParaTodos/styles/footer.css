@@ -1,0 +1,75 @@
+
+/* --- Reset e Fontes --- */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+
+/* --- Estilos do Rodapé (Desktop) --- */
+footer {
+    height: 150px;
+    background-color: #00296B;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #FFFCF6;
+}
+
+.align-footer {
+    display: flex;
+    width: 80%;
+    justify-content: space-between;
+}
+
+.contato-localizacao {
+    margin-top: 10px;
+}
+
+.contato-localizacao ul li {
+    display: flex;
+}
+
+.contato-localizacao ul li img {
+    width: 19px;
+    height: 19px;
+    margin-right: 10px;
+}
+
+.desc-footer {
+    font-family: 'Nunito';
+    font-weight: bold;
+    font-size: 14px;
+}
+
+
+/* =============================================================
+   --- Media Query para Rodapé (Telas Pequenas) ---
+============================================================= */
+
+@media (max-width: 768px) {
+
+    /* --- RODAPÉ (Mobile) --- */
+    footer {
+        height: auto;
+        /* Altura automática */
+    }
+
+    footer .align-footer {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 30px;
+        padding: 30px 20px;
+        width: 100%;
+        /* Ocupa toda a largura */
+    }
+
+    .contato-localizacao ul li {
+        justify-content: center;
+    }
+}
