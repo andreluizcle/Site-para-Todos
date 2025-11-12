@@ -1,65 +1,68 @@
+/* ------------------- IMPORTAR TIPOGRAFIAS -------------------- */
 @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
 
-.banner {
-    background-image: url("../images/bg_banner.png");
-    height: 514px;
-    display: flex;
-    align-items: center;
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
-}
+/* -------------------------- BANNER --------------------------- */
+.banner { position: relative; }
+.banner img { width: 100vw; height: 700px; }
 
 .text-banner {
-    margin-left: 10%;
+    position: absolute;
+    top: 0; left: 0;
     width: 555px;
     color: white;
 }
 
-.escola {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 112px;
+.text-banner p:first-of-type {
+    font-size: 38px; font-family: 'Fredoka'; font-weight: 700; 
+    line-height: 45px;
 }
 
-.text-escola {
-    margin-left: 10%;
-    width: 555px;
+.text-banner p:nth-of-type(2) {
+    font-size: 17px; font-family: 'Nunito'; font-weight: 700; 
+    line-height: 25px;
+    margin-top: 10px;
 }
+
+/* ------------------ INFORMAÇÕES DA ESCOLA -------------------- */
+.escola {
+    width: var(--base-resolution-width);
+    display: flex;
+    justify-content: space-between; align-items: center;
+    margin: 50px auto 0;
+}
+
+.text-escola { width: 600px; }
 
 .title {
-    font-size: 36px;
-    line-height: 45px;
-    font-weight: bold;
     color: #00296B;
-    font-family: 'Fredoka';
+    font-size: 2.2rem; font-family: 'Fredoka'; font-weight: bold;
 }
 
 .desc {
-    font-weight: 700;
-    font-size: 17px;
-    line-height: 100%;
-    margin-top: 20px;
     color: #00296B;
-    font-family: 'Nunito';
+    font-size: 1.05rem; font-family: 'Nunito'; font-weight: 700;
+    margin-top: 20px;
 }
 
-.btn .btn-historia {
-    margin: auto;
-    margin-top: 20px;
+.desc p:not(:first-of-type) {
+    margin-top: 10px;
+}
+
+.btn { display: inline-block; }
+
+.btn-historia {
+    background-color: var(--secondary-color);
+    display: flex; 
+    justify-content: center; align-items: center;
+    font-family: 'Fredoka'; font-weight: bold;
+    padding: 12px 35px; margin-top: 30px;
+    border-radius: 50px;
 }
 
 .btn-historia a {
     color: white;
-    border-radius: 20px;
-    padding-left: 25px;
-    padding-right: 24px;
-    padding-top: 8px;
-    padding-bottom: 9px;
-    margin-left: -28px;
-
     text-decoration: none;
 }
 
@@ -69,25 +72,10 @@
     transition: 0.5s;
 }
 
-.btn-historia {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    background-color: #FF013A;
-    border-radius: 20px;
-
-    font-family: 'Fredoka';
-    font-weight: bold;
-
-    margin-right: 90px;
-    margin-top: 30px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    padding-left: 26.5px;
-
-    width: 224px;
-    height: 45px;
+/* ----------------- CARTÕES DE INFO RÁPIDOS ------------------- */
+section:first-of-type {
+    width: var(--base-resolution-width); 
+    margin: auto;
 }
 
 .text-aleatorio {
@@ -95,30 +83,26 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    margin-top: 90px;
+    margin-top: 80px;
+}
+
+.text-aleatorio p:nth-of-type(2) {
+    text-align: center;
+    width: 60%;
 }
 
 .sistema-ensino {
-    display: flex;
-    justify-content: space-between;
-    width: 75%;
-    margin-left: auto;
-    margin-right: auto;
+    display: flex; flex-flow: row wrap;
+    justify-content: space-evenly;
+    gap: 30px 40px;
+    margin-top: 50px;
 }
 
-.item {
-    display: flex;
-}
+.item { display: flex; }
+.icon { display: flex; align-items: center; }
+.text-item { margin-left: 20px; }
 
-.icon {
-    display: flex;
-    align-items: center;
-}
-
-.text-item {
-    margin-left: 20px;
-}
-
+/* ------------------- BOLHAS DE INFORMACAO -------------------- */
 .valores {
     margin-top: 50px;
     display: flex;
@@ -131,62 +115,65 @@
     gap: 35px;
 }
 
+/* -------------------- TABELA DE CURSOS ----------------------- */
 .educacao {
-    margin-top: -60px;
-    background-image: url("../images/bg_yellow_wave.png");
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    padding-left: 250px;
-    padding-right: 250px;
-    padding-top: 75px;
-    padding-bottom: 30px;
+    padding: 40px 0 60px; margin-top: -60px;
+
+    background-image: url(../images/bg_yellow_wave.png);
     background-size: 100% 100%;
     background-repeat: no-repeat;
 }
 
+.educacao > div {
+    width: var(--base-resolution-width);
+    margin: auto;
+    display: flex;
+    justify-content: center; align-items: center;
+    column-gap: 130px;
+}
 
-.card {
+.icon-infantil img { width: 166px; }
+
+.card { width: 400px; text-align: center; }
+.card > div:nth-of-type(2) {
     background-color: white;
-    border-radius: 10px;
-    width: 317px;
-    padding-top: 75px;
-    margin-top: -70px;
-    padding-bottom: 10px;
+    padding: 80px 40px 20px; margin-top: -70px;
+    border-radius: 20px;
+}
+
+.title-info { 
+    color: var(--third-color);
+    font-size: 1.8rem; font-family: 'Fredoka'; font-weight: bold;
 }
 
 .idade {
-    font-size: 18px;
-    font-weight: 400;
-    color: #EDA900;
-    text-align: center;
+    color: var(--light-text-color);
+    font-size: 1.3rem; font-family: 'Fredoka'; font-weight: bold;
+    margin-top: 5px;
 }
 
-.lista {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 10px;
+.lista > ul {
+    display: flex; flex-wrap: wrap;
+    justify-content: center; align-items: center;
+    row-gap: 20px;
+    margin-top: 20px;
 }
 
-.lista ul li {
-    display: flex;
-    padding: 8px;
-    justify-content: center;
+.lista ul li { 
+    display: flex; 
+    justify-content: center; column-gap: 20px;
 }
+.icon img { width: 25px; height: 25px; }
 
 .list-item-texto {
-    margin-left: 5px;
-    font-family: 'Nunito';
     color: #00296B;
-    font-weight: bold;
+    font-family: 'Nunito'; font-weight: bold;
+    text-align: left;
 }
 
-.icon-infantil-fundamental {
-    display: flex;
-    justify-content: center;
-}
+.lista .btn-historia { padding: 10px 45px; margin-top: 10px; }
 
+/* ------------------------ MATRICULA -------------------------- */
 .fotos-escola-matricula {
     background-image: url("../images/bg_black_line.png");
     display: flex;
@@ -195,10 +182,6 @@
     padding-top: 20px;
     padding-left: 10%;
     padding-bottom: 20px;
-}
-
-.card {
-    margin-bottom: 100px;
 }
 
 .foto {

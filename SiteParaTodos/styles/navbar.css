@@ -1,37 +1,61 @@
+/* ------------------- IMPORTAR TIPOGRAFIAS -------------------- */
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
 
-/* --- Reset e Fontes --- */
+/* ------------------------- CSS GERAL ------------------------- */
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+:root {
+    --background-color: #FFFCF6;
+    --primary-color: #FCBF0E;
+    --secondary-color: #FF013A;
+    --third-color: #00296B;
 
-/* --- Estilos do Menu (Desktop) --- */
+    --neutral-text-color: #ffffff;
+    --light-text-color: #EDA900;
 
+    --base-resolution-width: 1280px;
+}
+
+html { font-size: 17px; }
+body { background-color: var(--background-color); }
+
+/* ------------------------ HEADER E NAV ----------------------- */
+nav {
+    background-color: var(--background-color);
+    display: flex; justify-content: space-between;
+    width: var(--base-resolution-width);
+    margin: auto; padding: 20px 15px;
+    font-family: 'Nunito'; font-weight: bold;
+}
+
+nav ul {
+    display: flex; 
+    justify-content: space-between; align-items: center;
+    column-gap: 45px;
+    list-style: none;
+}
+
+nav .matricula {
+    background-color: var(--secondary-color);
+    display: flex;
+    justify-content: center; align-items: center;
+    padding: 12px 35px;
+    border-radius: 50px;
+}
+
+nav .matricula a {
+    color: white;
+    font-family: 'Fredoka'; font-weight: bold;
+}
+
+/* --------------------------------------- */
 .logo a {
     cursor: pointer;
-}
-
-.navigation {
-    display: flex;
-    justify-content: space-between;
-    padding: 1.5rem 4rem;
-    font-family: 'Nunito';
-    font-weight: bold;
-}
-
-.navigation ul {
-    display: flex;
-    list-style: none;
-}
-
-.navigation ul li {
-    padding-left: 40px;
-    padding-top: 22px;
-    list-style: none;
 }
 
 .navigation a {
@@ -44,40 +68,10 @@
     transition: 0.3s;
 }
 
-.matricula a {
-    color: white;
-    font-family: 'Fredoka';
-    font-weight: bold;
-    border-radius: 20px;
-    padding-left: 25px;
-    padding-right: 24px;
-    padding-top: 8px;
-    padding-bottom: 9px;
-    margin-left: -28px;
-}
-
 .matricula a:hover {
     opacity: 1;
     color: white;
     transition: 0.5s;
-}
-
-.matricula {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #FF013A;
-    border-radius: 20px;
-    margin-top: -10px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    padding-left: 26.5px;
-    width: 224px;
-    height: 45px;
-}
-
-.navigation ul .li-matricula {
-    margin-left: 175px;
 }
 
 /* --- Estilos do Dropdown (Desktop) --- */
@@ -110,7 +104,7 @@
 
 /* Este padding grande do desktop atrapalha no mobile */
 .ensino-menu {
-    padding: 20px;
+    /* padding: 20px; */
 }
 
 .navigation ul li .dropdown-menu li a {
