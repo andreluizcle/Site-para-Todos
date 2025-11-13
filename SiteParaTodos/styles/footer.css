@@ -1,3 +1,6 @@
+/* =============================================================================================
+                              --- Código CSS para Desktop Grandes ---
+============================================================================================= */
 /* ------------------- IMPORTAR TIPOGRAFIAS -------------------- */
 @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
@@ -32,8 +35,6 @@ footer .title {
 }
 
 .align-footer > div:nth-of-type(1) { width: 22%; }
-.align-footer > div:nth-of-type(2) { width: 15%; }
-.align-footer > div:nth-of-type(3) { width: 45%; }
 
 .contato-localizacao ul { margin-top: 10px; }
 .contato-localizacao ul li { display: flex; }
@@ -46,10 +47,29 @@ footer .title {
 footer a { color: var(--neutral-text-color); text-decoration: underline; }
 footer a:visited, footer a:focus { color: var(--neutral-text-color); }
 
-/* =============================================================
-   --- Media Query para Rodapé (Telas Pequenas) ---
-============================================================= */
+/* =============================================================================================
+                             --- Media Query para Desktop Menores ---
+============================================================================================= */
+@media (max-width: 1366px) and (min-width: 981px) {
+    /* -------------------------- FOOTER --------------------------- */
+    footer { height: 265px; }
 
+    .align-footer { 
+        flex-wrap: wrap; 
+        justify-content: center;
+        gap: 30px 4vw;
+    }
+
+    .align-footer > div:nth-of-type(1) { 
+        display: flex; flex-flow: column wrap;
+        align-items: center;
+        width: 100%; 
+    }
+}
+
+/* =============================================================================================
+                                --- Media Query para Celulares ---
+============================================================================================= */
 @media (max-width: 768px) {
 
     /* --- RODAPÉ (Mobile) --- */

@@ -1,3 +1,6 @@
+/* =============================================================================================
+                              --- Código CSS para Desktop Grandes ---
+============================================================================================= */
 /* ------------------- IMPORTAR TIPOGRAFIAS -------------------- */
 @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
@@ -22,7 +25,7 @@
 }
 
 html { font-size: 17px; }
-body { background-color: var(--background-color); }
+body { background-color: var(--background-color); overflow-x: hidden; }
 
 /* ------------------------ HEADER E NAV ----------------------- */
 nav {
@@ -151,10 +154,19 @@ nav .matricula a {
     transition: all 0.3s ease-in-out;
 }
 
-/* =============================================================
-   --- Media Query para Menu (Telas Pequenas) ---
-============================================================= */
+/* =============================================================================================
+                             --- Media Query para Desktop Menores ---
+============================================================================================= */
+@media (max-width: 1366px) and (min-width: 981px) {
+    :root { --base-resolution-width: 90vw; }
+    html { font-size: 15px; }
+    
+    nav ul { column-gap: 2.5vw; }
+}
 
+/* =============================================================================================
+                                --- Media Query para Celulares ---
+============================================================================================= */
 @media (max-width: 768px) {
 
     .navigation {

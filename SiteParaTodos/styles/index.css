@@ -29,6 +29,7 @@
     width: var(--base-resolution-width);
     display: flex;
     justify-content: space-between; align-items: center;
+    column-gap: 11vw;
     margin: 50px auto 0;
 }
 
@@ -228,7 +229,55 @@ section:first-of-type {
     transition: all 0.3s ease-in-out;
 }
 
+/* =============================================================================================
+                             --- Media Query para Desktop Menores ---
+============================================================================================= */
+@media (max-width: 1366px) and (min-width: 981px) {
+    /* -------------------------- BANNER --------------------------- */
+    /* ------------------ INFORMAÇÕES DA ESCOLA -------------------- */
+    .escola { column-gap: 5vw; }
+    .escola .icone-flutuante:nth-of-type(4) { width: 85px; right: 30px; }
 
+    /* ----------------- CARTÕES DE INFO RÁPIDOS ------------------- */
+    .item { width: 40%; }
+
+    /* ------------------- BOLHAS DE INFORMACAO -------------------- */
+    .valores { margin-top: 65px; }
+    .valores > div:nth-of-type(1) img { width: 370px; }
+
+    .bubbles { 
+        gap: 1vw;
+        margin-left: calc(-425px + 25vw);
+        margin-top: -90px;
+    }
+    .bubbles img { width: 145px; }
+
+    /* -------------------- TABELA DE CURSOS ----------------------- */
+    .educacao { margin-top: -70px; }
+    .educacao > div { column-gap: 6vw; }
+
+    .card { width: 350px; }
+    .card > div:nth-of-type(2) { padding: 80px 25px 20px; }
+
+    /* ------------------------ MATRICULA -------------------------- */
+
+
+
+}
+
+/* =============================================================================================
+                                 --- Media Query para Tablets ---
+============================================================================================= */
+@media (max-width: 980px) and (min-width: 769px) {
+    :root { --base-resolution-width: 90vw; }
+    html { font-size: 15px; }
+
+    .escola { column-gap: 5vw; }
+}
+
+/* =============================================================================================
+                                --- Media Query para Celulares ---
+============================================================================================= */
 @media (max-width: 768px) {
     body {
         overflow-x: hidden;
