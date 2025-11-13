@@ -9,39 +9,44 @@
 
 .text-banner {
     position: absolute;
-    top: 0; left: 0;
-    width: 555px;
+    top: 25%; left: 10%;
+    width: 650px;
     color: white;
 }
 
 .text-banner p:first-of-type {
-    font-size: 38px; font-family: 'Fredoka'; font-weight: 700; 
-    line-height: 45px;
+    font-size: 2.4rem; font-family: 'Fredoka'; font-weight: 700;
 }
 
 .text-banner p:nth-of-type(2) {
-    font-size: 17px; font-family: 'Nunito'; font-weight: 700; 
-    line-height: 25px;
-    margin-top: 10px;
+    font-size: 1.1rem; font-family: 'Nunito'; font-weight: 700; 
+    margin-top: 20px;
 }
 
 /* ------------------ INFORMAÇÕES DA ESCOLA -------------------- */
 .escola {
+    position: relative;
     width: var(--base-resolution-width);
     display: flex;
     justify-content: space-between; align-items: center;
     margin: 50px auto 0;
 }
 
+.escola .icone-flutuante { position: absolute; }
+.escola .icone-flutuante:nth-of-type(1) { width: 90px; top: -50px; left: -35px; }
+.escola .icone-flutuante:nth-of-type(2) { width: 110px; bottom: 50px; left: -200px; }
+.escola .icone-flutuante:nth-of-type(3) { width: 70px; top: -15px; right: -130px; }
+.escola .icone-flutuante:nth-of-type(4) { width: 90px; bottom: -30px; right: 145px; }
+
 .text-escola { width: 600px; }
 
 .title {
-    color: #00296B;
+    color: var(--third-color);
     font-size: 2.2rem; font-family: 'Fredoka'; font-weight: bold;
 }
 
 .desc {
-    color: #00296B;
+    color: var(--third-color);
     font-size: 1.05rem; font-family: 'Nunito'; font-weight: 700;
     margin-top: 20px;
 }
@@ -62,13 +67,13 @@
 }
 
 .btn-historia a {
-    color: white;
+    color: var(--neutral-text-color);
     text-decoration: none;
 }
 
 .btn-historia a:hover {
     opacity: 1;
-    color: white;
+    color: var(--neutral-text-color);
     transition: 0.5s;
 }
 
@@ -98,9 +103,14 @@ section:first-of-type {
     margin-top: 50px;
 }
 
-.item { display: flex; }
-.icon { display: flex; align-items: center; }
-.text-item { margin-left: 20px; }
+.item { 
+    display: flex; align-items: center;
+    column-gap: 30px;
+    width: 31%;
+}
+.sistema-ensino .icon img { width: 50px; height: 50px; }
+.sistema-ensino .item .title { font-size: 1.5rem; }
+.sistema-ensino .item .desc { font-size: 1rem; margin-top: 10px; }
 
 /* ------------------- BOLHAS DE INFORMACAO -------------------- */
 .valores {
@@ -161,16 +171,17 @@ section:first-of-type {
 
 .lista ul li { 
     display: flex; 
-    justify-content: center; column-gap: 20px;
+    justify-content: center; align-items: center;
+    column-gap: 20px;
 }
-.icon img { width: 25px; height: 25px; }
+.lista .icon img { width: 35px; height: 35px; }
 
 .list-item-texto {
     color: #00296B;
     font-family: 'Nunito'; font-weight: bold;
     text-align: left;
 }
-
+.list-item-texto p { font-size: 1.05rem; }
 .lista .btn-historia { padding: 10px 45px; margin-top: 10px; }
 
 /* ------------------------ MATRICULA -------------------------- */

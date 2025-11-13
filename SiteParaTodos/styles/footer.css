@@ -1,51 +1,50 @@
+/* ------------------- IMPORTAR TIPOGRAFIAS -------------------- */
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
 
-/* --- Reset e Fontes --- */
+/* ------------------------- CSS GERAL ------------------------- */
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
-
-
-/* --- Estilos do Rodapé (Desktop) --- */
+/* -------------------------- FOOTER --------------------------- */
 footer {
-    height: 150px;
-    background-color: #00296B;
+    background-color: var(--third-color);
     display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #FFFCF6;
+    justify-content: center; align-items: center;
+    height: 200px;
+
+    color: var(--neutral-text-color);
+    font-size: 0.9rem; font-family: 'Nunito'; font-weight: bold;
+}
+
+footer .title {
+    color: var(--neutral-text-color);
+    font-size: 1.2rem; font-family: 'Fredoka'; font-weight: bold;
 }
 
 .align-footer {
-    display: flex;
-    width: 80%;
-    justify-content: space-between;
+    display: flex; 
+    justify-content: space-between; align-items: center;
+    width: var(--base-resolution-width);
 }
 
-.contato-localizacao {
-    margin-top: 10px;
-}
+.align-footer > div:nth-of-type(1) { width: 22%; }
+.align-footer > div:nth-of-type(2) { width: 15%; }
+.align-footer > div:nth-of-type(3) { width: 45%; }
 
-.contato-localizacao ul li {
-    display: flex;
-}
+.contato-localizacao ul { margin-top: 10px; }
+.contato-localizacao ul li { display: flex; }
 
 .contato-localizacao ul li img {
-    width: 19px;
-    height: 19px;
+    width: 19px; height: 19px;
     margin-right: 10px;
 }
 
-.desc-footer {
-    font-family: 'Nunito';
-    font-weight: bold;
-    font-size: 14px;
-}
-
+footer a { color: var(--neutral-text-color); text-decoration: underline; }
+footer a:visited, footer a:focus { color: var(--neutral-text-color); }
 
 /* =============================================================
    --- Media Query para Rodapé (Telas Pequenas) ---
