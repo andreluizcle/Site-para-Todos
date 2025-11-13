@@ -1,39 +1,12 @@
+/* =============================================================================================
+                              --- Código CSS para Desktop Grandes ---
+============================================================================================= */
+/* ------------------- IMPORTAR TIPOGRAFIAS -------------------- */
 @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
 
-.align {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.title {
-    font-size: 38px;
-    font-family: 'Fredoka';
-    font-weight: 700;
-    text-align: center;
-    line-height: 45px;
-    color: #00296B;
-}
-
-.subtitle {
-    font-size: 26px;
-    color: #EDA900;
-    font-family: 'Fredoka';
-    font-weight: 700;
-}
-
-.text {
-    font-size: 17px;
-    font-family: 'Nunito';
-    font-weight: 700;
-    text-align: center;
-    color: #00296B;
-    text-align: justify;
-    margin-top: 15px;
-}
-
+/* -------------------------- BANNER --------------------------- */
 .banner {
     background-image: url("../images/IMG-20250918-WA0003.jpg");
     height: 514px;
@@ -44,50 +17,70 @@
     background-repeat: no-repeat;
 }
 
-.fundo {
-    background-image: url("../images/IMG-20250918-WA0004.jpg");
-    height: 614px;
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    padding-top: 150px;
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
+/* ------------------------- HISTÓRIA -------------------------- */
+.box-historia {
+    width: calc(var(--base-resolution-width) - 150px); 
+    margin: 30px auto 0;
 }
 
-.text-banner {
-    display: flex;
-    width: 555px;
-    color: white;
+.title { 
+    color: var(--third-color);
+    text-align: center;
+    font-size: 2.2rem; font-family: 'Fredoka'; font-weight: bold; 
 }
 
-/* The actual timeline (the vertical ruler) */
+.box-historia > .text:nth-of-type(2) { margin-top: 20px; }
+.text {
+    color: var(--third-color);
+    text-align: justify;
+    font-size: 1.05rem; font-family: 'Nunito'; font-weight: 700;
+    margin-top: 10px;
+}
+
+/* ---------------------- LINHA DO TEMPO ----------------------- */
+.align {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; align-items: center;
+
+    margin: 70px 0 0;
+}
+
 .timeline {
     position: relative;
-    max-width: 1200px;
-    margin: 0 auto;
+    max-width: var(--base-resolution-width);
+    margin: 20px 49% 20px 51%;
 }
 
-/* The actual timeline (the vertical ruler) */
 .timeline::after {
     content: '';
     position: absolute;
     width: 10px;
     background-color: #FF013A;
-    top: 0;
+    top: 60px;
     bottom: 0;
     border-radius: 10px;
+    height: 80%;
 }
 
-/* Container around content */
+.content {
+    padding: 20px 30px;
+    position: relative;
+    border-radius: 6px;
+    margin-bottom: 25px;
+    margin-left: 30px;
+    width: 45vw;
+}
+
+.content p:nth-of-type(1) { text-align: left; font-size: 1.9rem; }
+.content p:nth-of-type(2) { width: 45vw; }
+
 .container {
     padding: 0px 40px;
-    margin-top: 40px;
     position: relative;
     background-color: inherit;
 }
 
-/* The circles on the timeline */
 .container::after {
     content: '1945';
     color: white;
@@ -100,7 +93,7 @@
     margin-left: -33px;
     background-color: #FCBF0E;
     border: 4px solid #FCBF0E;
-    top: 15px;
+    top: 35px;
     border-radius: 50%;
     z-index: 1;
     font-size: 30px;
@@ -110,7 +103,6 @@
     line-height: 45px;
 }
 
-/* Add arrows to the right container (pointing left) */
 .right::before {
     content: " ";
     height: 0;
@@ -124,18 +116,53 @@
     border-color: transparent white transparent transparent;
 }
 
-/* Fix the circle for containers on the right side */
-.right::after {
-    left: -16px;
+.right::after { left: -16px; }
+
+/* ----------------- MISSÃO, VISÃO E VALORES -------------------- */
+.mvv {
+    display: flex;
+    justify-content: center; align-items: center;
+    column-gap: 60px;
+    
+    background-image: url("../images/bg_yellow_continuous_wave.png");
+    background-size: cover; background-repeat: no-repeat;
+    padding: 230px 0 80px;
 }
 
-/* The actual content */
-.content {
-    padding: 20px 30px;
+.mvv .topic {
+    display: flex;
+    flex-direction: column;
     background-color: white;
-    position: relative;
-    border-radius: 6px;
-    width: 878px;
+    width: 340px;
+    padding: 40px 40px 40px;
+    border-radius: 20px;
+    text-align: center;
+}
+
+.mvv .topic img {
+    width: 100px;
+    margin: -70px auto 0;
+}
+
+.mvv .title {
+    font-size: 1.8rem;
+    margin-top: 10px;
+}
+
+.mvv .subtitle {
+    color: var(--light-text-color);
+    font-size: 1.3rem; font-family: 'Fredoka'; font-weight: bold;
+    margin-top: 5px;
+}
+
+.mvv .text {
+    font-size: 1.05rem; margin-top: 20px;
+}
+
+.text-banner {
+    display: flex;
+    width: 555px;
+    color: white;
 }
 
 
