@@ -163,7 +163,6 @@ iframe {
     .align:nth-of-type(5) .btn-conhecer { padding: 10px 45px; }
 
     /* -------------------- DEMAIS RESPONSIVO ---------------------- */
-    /* --- GERAL --- */
     body {
         overflow-x: hidden;
         /* Previne rolagem horizontal */

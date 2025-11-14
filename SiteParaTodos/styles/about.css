@@ -49,7 +49,7 @@
 .timeline {
     position: relative;
     max-width: var(--base-resolution-width);
-    margin: 20px 49% 20px 51%;
+    margin: 20px 48% 20px 51%;
 }
 
 .timeline::after {
@@ -57,10 +57,10 @@
     position: absolute;
     width: 10px;
     background-color: #FF013A;
-    top: 60px;
+    top: 90px;
     bottom: 0;
     border-radius: 10px;
-    height: 80%;
+    height: 65%;
 }
 
 .content {
@@ -96,7 +96,7 @@
     top: 35px;
     border-radius: 50%;
     z-index: 1;
-    font-size: 30px;
+    font-size: 1.8rem;
     font-family: 'Fredoka';
     font-weight: 700;
     text-align: center;
@@ -118,7 +118,7 @@
 
 .right::after { left: -16px; }
 
-/* ----------------- MISSÃO, VISÃO E VALORES -------------------- */
+/* ----------------- MISSÃO, VISÃO E VALORES ------------------- */
 .mvv {
     display: flex;
     justify-content: center; align-items: center;
@@ -165,8 +165,58 @@
     color: white;
 }
 
+/* =============================================================================================
+                             --- Media Query para Desktop Menores ---
+============================================================================================= */
+@media (max-width: 1366px) and (min-width: 981px) {
+    /* -------------------------- BANNER --------------------------- */
+    /* ------------------------- HISTÓRIA -------------------------- */
+    /* ---------------------- LINHA DO TEMPO ----------------------- */
+    .timeline { margin: 20px 46% 20px 51%; }
+    .container::after {
+        width: 90px; height: 90px;
+        top: 45px;
+    }
+    .right::after { left: -10px; }
 
-@media screen and (max-width: 600px) {
+    /* ----------------- MISSÃO, VISÃO E VALORES ------------------- */
+    .mvv { background-size: 100% 105%; padding: 180px 0 60px; column-gap: 30px; }
+    .mvv .topic { width: 27%; padding: 40px 20px; }
+    .mvv .topic img { margin: -90px auto 0; }
+    /* -------------------- DEMAIS RESPONSIVO ---------------------- */
+}
+
+/* =============================================================================================
+                                --- Media Query para Celulares ---
+============================================================================================= */
+@media screen and (max-width: 980px) {
+    /* -------------------------- BANNER --------------------------- */
+    /* ------------------------- HISTÓRIA -------------------------- */
+    .box-historia { width: var(--base-resolution-width); max-width: 600px; }
+    .box-historia .text { text-align: center; }
+
+    /* ---------------------- LINHA DO TEMPO ----------------------- */
+    .align { margin-top: 50px; }
+    .timeline { margin: 20px 46% 20px 53%; }
+    .content p:nth-of-type(2) { width: 55vw; max-width: 460px; }
+    .content { margin-left: 10px; }
+    
+    .content .text { text-align: left; }
+
+    .container::after { width: 80px; height: 80px; top: 45px; }
+    .right::after { left: 25px;}
+
+    /* ----------------- MISSÃO, VISÃO E VALORES ------------------- */
+    .mvv { 
+        background-size: 300% 105%;
+        flex-direction: column; row-gap: 60px; 
+        padding: 200px 0 60px;
+    }
+    .mvv .topic { width: 80%; max-width: 600px; padding: 40px 20px 40px; }
+    .mvv .topic img { width: 90px; margin: -80px auto 0; }
+    .mvv .text { margin-top: 15px; }
+
+    /* -------------------- DEMAIS RESPONSIVO ---------------------- */
 
     /* Place the timelime to the left */
     .timeline::after {
@@ -186,12 +236,6 @@
         border: medium solid white;
         border-width: 10px 10px 10px 0;
         border-color: transparent white transparent transparent;
-    }
-
-    /* Make sure all circles are at the same spot */
-    .left::after,
-    .right::after {
-        left: 15px;
     }
 
     /* Make all right containers behave like the left ones */
@@ -218,7 +262,7 @@
 /* =============================================================
    --- NOVO: Media Query Principal (Telas de Tablet e Celular) ---
 ============================================================= */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1px) {
 
     .container::after {
         width: 80px;
