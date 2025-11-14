@@ -70,25 +70,22 @@ footer a:visited, footer a:focus { color: var(--neutral-text-color); }
 /* =============================================================================================
                                 --- Media Query para Celulares ---
 ============================================================================================= */
-@media (max-width: 768px) {
+@media (max-width: 980px) {
+    /* -------------------------- FOOTER --------------------------- */
+    .align-footer > div:nth-of-type(1) { min-width: 300px; }
 
-    /* --- RODAPÉ (Mobile) --- */
-    footer {
-        height: auto;
-        /* Altura automática */
-    }
+    footer { height: auto; }
 
     footer .align-footer {
         flex-direction: column;
         align-items: center;
         text-align: center;
         gap: 30px;
-        padding: 30px 20px;
+        padding: 30px 30px;
         width: 100%;
-        /* Ocupa toda a largura */
     }
 
-    .contato-localizacao ul li {
-        justify-content: center;
-    }
+    .contato-localizacao:nth-of-type(3) { width: 90%; }
+    .contato-localizacao ul li { justify-content: center; }
+    .contato-localizacao ul li:not(:first-of-type) { margin-top: 5px; }
 }

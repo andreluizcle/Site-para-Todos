@@ -1,78 +1,52 @@
+/* =============================================================================================
+                              --- Código CSS para Desktop Grandes ---
+============================================================================================= */
+/* ------------------- IMPORTAR TIPOGRAFIAS -------------------- */
 @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
 
+/* ---------------------- ESTUDE CONOSCO ----------------------- */
 .align {
     display: flex;
-    align-items: center;
-    justify-content: center;
+    justify-content: space-between; align-items: center;
+
+    width: calc(var(--base-resolution-width) - 150px);
+    margin: 70px auto;
+}
+.align:first-of-type { margin-top: 50px; }
+
+main .align:first-of-type > div:first-of-type { width: 55%; }
+
+main .align .title {
+    color: var(--third-color);
+    text-align: left;
+    font-size: 2.2rem; font-family: 'Fredoka'; font-weight: bold;
+    margin-bottom: 20px;
 }
 
-.title {
-    font-size: 38px;
-    font-family: 'Fredoka';
-    font-weight: 700;
-    text-align: center;
-    line-height: 45px;
-    color: #00296B;
-}
-
-.subtitle {
-    font-size: 26px;
-    color: #EDA900;
-    font-family: 'Fredoka';
-    font-weight: 700;
-}
-
-.text {
-    font-size: 17px;
-    font-family: 'Nunito';
-    font-weight: 700;
-    text-align: center;
-    color: #00296B;
+main .align .text {
+    color: var(--third-color);
     text-align: justify;
-    margin-top: 15px;
+    font-size: 1.05rem; font-family: 'Nunito'; font-weight: bold;
+    margin-top: 10px;
 }
 
-.item {
-    display: flex;
-    width: 462px;
-}
+main .align:first-of-type div:nth-of-type(2) img { width: 380px; }
 
-.icon {
+.btn-conhecer {
+    background-color: var(--secondary-color);
     display: flex;
+    justify-content: center;
     align-items: center;
+    font-family: 'Fredoka';
+    font-weight: bold;
+    padding: 12px 35px;
+    margin-top: 30px;
+    border-radius: 50px;
+    width: max-content;
 }
-
-.text-item {
-    margin-left: 20px;
-}
-
-.img-size {
-    height: 200px;
-    width: 200px;
-    border-radius: 18px;
-    transition: 0.8s;
-}
-
-.img-size:hover {
-    transition: 0.8s;
-    height: 300px;
-    width: 300px;
-}
-
-.btn-conhecer a {
-    color: white;
-    border-radius: 20px;
-
-    padding-left: 25px;
-    padding-right: 24px;
-    padding-top: 8px;
-    padding-bottom: 9px;
-    margin-left: -28px;
-
-    text-decoration: none;
-}
+.btn-conhecer a { color: white; text-decoration: none; }
 
 .btn-conhecer a:hover {
     opacity: 1;
@@ -80,41 +54,119 @@
     transition: 0.5s;
 }
 
-.btn-conhecer {
+/* -------------------- AGENDA DE VISITAS ---------------------- */
+main .align:nth-of-type(2) > div:first-of-type { width: 55%; }
+
+.item {
     display: flex;
-    align-items: center;
-    justify-content: center;
-
-    background-color: #FF013A;
-    border-radius: 20px;
-
-    font-family: 'Fredoka';
-    font-weight: bold;
-
-    padding-top: 10px;
-    padding-bottom: 10px;
-    padding-left: 26.5px;
-
-    width: 224px;
-    height: 43px;
+    column-gap: 30px;
+    width: 100%; max-width: 470px;
+    margin-top: 25px;
 }
 
-/* =============================================================
-   --- Media Query para Contato (Telas Pequenas) ---
-============================================================= */
+.item .text-item .title { font-size: 1.5rem; margin-bottom: 10px; }
+.item .text-item .text { font-size: 1rem; }
 
-@media (max-width: 768px) {
+.icon {
+    display: flex;
+    align-items: center;
+}
 
+iframe {
+    border: 0; border-radius: 20px;
+    margin-right: -35px;
+    width: 460px;
+}
+
+/* --------------------- GALERIA DE FOTOS ---------------------- */
+.align:nth-of-type(3) { flex-direction: column; margin: 80px auto 50px; }
+.align:nth-of-type(3) .text { 
+    width: 60%;
+    text-align: center; 
+    margin-top: 0;
+}
+
+.galeria-imagem {
+    display: flex;
+    flex-flow: row wrap; justify-content: center;
+    gap: 40px 45px;
+    margin: 50px auto 0;
+}
+
+.img-size {
+    width: 220px; height: 220px;
+    border-radius: 18px;
+}
+
+.align:nth-of-type(5) {
+    justify-content: center;
+    margin: 10px auto 60px;
+}
+.align:nth-of-type(5) .btn-conhecer { padding: 12px 50px; }
+
+/* =============================================================================================
+                             --- Media Query para Desktop Menores ---
+============================================================================================= */
+@media (max-width: 1366px) and (min-width: 981px) {
+    /* ---------------------- ESTUDE CONOSCO ----------------------- */
+    main .align:first-of-type > div:first-of-type { width: 50%; }
+    main .align:first-of-type div:nth-of-type(2) img { width: 30vw; max-width: 350px; }
+
+    /* -------------------- AGENDA DE VISITAS ---------------------- */
+    main .align:nth-of-type(2) > div:first-of-type { width: 50%; }
+    main .align:nth-of-type(2) iframe { 
+        width: 33vw; height: clamp(360px, 33vw, 390px);
+        margin-right: -2vw;
+        border-radius: 15px;
+    }
+
+    /* --------------------- GALERIA DE FOTOS ---------------------- */
+    .galeria-imagem { gap: 30px 30px; }
+    .img-size { width: 155px; height: 155px; border-radius: 15px; }
+}
+
+/* =============================================================================================
+                                --- Media Query para Celulares ---
+============================================================================================= */
+@media (max-width: 980px) {
+    /* ---------------------- ESTUDE CONOSCO ----------------------- */
+    .align { 
+        width: var(--base-resolution-width); max-width: 600px;
+        margin: 60px auto;
+    }
+
+    .align:first-of-type { flex-direction: column-reverse; row-gap: 40px; }
+    main .align:first-of-type > div:first-of-type { width: 100%; }
+    
+    main .align:first-of-type div:nth-of-type(2) img { width: clamp(230px, 40vw, 350px); }
+    main .align .title, main .align .text { text-align: center; }
+    .btn-conhecer { margin: 30px auto 0; padding: 10px 30px; }
+    
+    /* -------------------- AGENDA DE VISITAS ---------------------- */
+    .align:nth-of-type(2) { flex-direction: column; row-gap: 20px; }
+    main .align:nth-of-type(2) > div:first-of-type { width: 100%; }
+    .item { 
+        width: 100%; max-width: 420px; 
+        margin: 25px auto;
+    }
+
+    .item .text-item .title, .item .text-item .text { text-align: left; }
+
+    .align:nth-of-type(2) div:nth-of-type(2) { width: 100%; }
+    iframe { width: 100%; }
+
+    /* --------------------- GALERIA DE FOTOS ---------------------- */
+    .align:nth-of-type(3) { margin: 50px auto 50px; }
+    .align:nth-of-type(3) .text { width: 100%; }
+    .galeria-imagem { gap: 30px 35px; margin-bottom: 0;}
+    .img-size { width: 250px; height: 250px; }
+    .align:nth-of-type(5) .btn-conhecer { padding: 10px 45px; }
+
+    /* -------------------- DEMAIS RESPONSIVO ---------------------- */
     /* --- GERAL --- */
     body {
         overflow-x: hidden;
         /* Previne rolagem horizontal */
-    }
-
-    .title {
-        font-size: 30px;
-        /* Reduz o título */
-        line-height: 1.2;
     }
 
     .text {
@@ -172,19 +224,6 @@
         height: auto;
     }
 
-    /* Itens de Localização/Horário */
-    .item {
-        width: 100%;
-        /* Era 462px */
-    }
-
-    /* Mapa */
-    iframe {
-        width: 100% !important;
-        /* Anula o width="446" do HTML */
-        height: 300px !important;
-    }
-
     /* --- GALERIA DE IMAGENS --- */
     /* Alvo: Os .align que contêm as .img-size.
       Eles precisam ser 'row' (para ter colunas) e 'wrap' (para quebrar a linha)
@@ -197,17 +236,6 @@
         gap: 10px;
         padding: 0 10px;
         margin-top: 30px;
-    }
-
-    .img-size {
-        width: 48%;
-        /* Cria uma grade de 2 colunas */
-        height: 150px;
-        object-fit: cover;
-        /* Garante que a imagem cubra sem distorcer */
-        margin: 0;
-        transition: none;
-        /* Remove a transição de hover */
     }
 
     /* Desativa o efeito de hover no mobile */

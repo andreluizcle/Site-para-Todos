@@ -167,7 +167,9 @@ nav .matricula a {
 /* =============================================================================================
                                 --- Media Query para Celulares ---
 ============================================================================================= */
-@media (max-width: 768px) {
+@media (max-width: 980px) {
+    :root { --base-resolution-width: 90vw; }
+    html { font-size: 14px; }
 
     .navigation {
         /* Garante que o logo e o ícone fiquem nas pontas */
