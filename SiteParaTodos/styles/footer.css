@@ -26,6 +26,7 @@ footer {
 footer .title {
     color: var(--neutral-text-color);
     font-size: 1.2rem; font-family: 'Fredoka'; font-weight: bold;
+    text-align: left;
 }
 
 .align-footer {

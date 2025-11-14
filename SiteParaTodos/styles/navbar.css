@@ -171,6 +171,8 @@ nav .matricula a {
     :root { --base-resolution-width: 90vw; }
     html { font-size: 14px; }
 
+    footer .title { text-align: center; }
+
     .navigation {
         /* Garante que o logo e o ícone fiquem nas pontas */
         justify-content: space-between;
@@ -191,14 +193,14 @@ nav .matricula a {
         top: 0;
         left: -100%;
         width: 80%;
-        max-width: 300px;
+        max-width: 280px;
         height: 100vh;
         background-color: white;
         flex-direction: column;
         align-items: center;
         justify-content: center;
         gap: 20px;
-        padding-top: 60px;
+        padding-top: 20px;
         box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
         transition: left 0.3s ease-in-out;
         z-index: 1000;
@@ -239,15 +241,15 @@ nav .matricula a {
         width: 100%;
         padding: 10px 0;
         /* Adiciona um padding vertical */
+        margin-top: 15px;
+        margin-bottom: -5px;
     }
 
     /* Botão Matrícula no mobile */
-    .matricula {
-        margin-left: auto;
-        /* Centraliza */
-        margin-right: auto;
-        margin-top: 0;
-        /* Reseta a margem */
+    nav .matricula {
+        margin: 20px auto 0;
+        padding: 10px 40px;
+        width: fit-content;
     }
 
     /* Botão Matrícula (li) no mobile */

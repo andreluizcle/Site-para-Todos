@@ -328,7 +328,7 @@ section:first-of-type {
         gap: 1vw;
     }
     .bubble > img { width: 120px; }
-    .bubble:nth-of-type(even) > img { margin-top: 35px; }
+    .bubble:nth-of-type(even) > img { margin-top: 30px; }
 
     /* -------------------- TABELA DE CURSOS ----------------------- */
     .educacao { 

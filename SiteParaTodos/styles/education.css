@@ -1,188 +1,226 @@
-    @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
-    @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
-    @import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+/* =============================================================================================
+                              --- Código CSS para Desktop Grandes ---
+============================================================================================= */
+/* ------------------- IMPORTAR TIPOGRAFIAS -------------------- */
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
 
-    .title {
-        font-size: 38px;
-        font-family: 'Fredoka';
-        font-weight: 700;
-        text-align: center;
-        line-height: 45px;
-    }
+/* -------------------------- BANNER --------------------------- */
+main .title { 
+    color: var(--third-color);
+    text-align: center;
+    font-size: 2.2rem; font-family: 'Fredoka'; font-weight: bold;
+    margin-bottom: 20px;
+}
 
-    .subtitle {
-        font-size: 26px;
-        color: #EDA900;
-        font-family: 'Fredoka';
-        font-weight: 700;
-    }
+main .text {
+    color: var(--third-color);
+    text-align: center;
+    font-size: 1.05rem; font-family: 'Nunito'; font-weight: 700;
+    margin-top: 10px;
+}
 
-    .text {
-        font-size: 17px;
-        font-family: 'Nunito';
-        font-weight: 700;
-        text-align: center;
-    }
+.fundo-introducao {
+    color: white;
+    background-image: url("../images/Group 53.jpg");
+    height: 320px;
+    background-size: 100% 100%; background-repeat: no-repeat;
+    padding: 60px calc(50vw - 350px);
+}
 
+.fundo-introducao .title { margin-bottom: 5px; }
+.fundo-introducao .title, .fundo-introducao .text { color: var(--neutral-text-color); }
+
+/* ------------------- INFORMACAO PRINCIPAL -------------------- */
+.align {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; align-items: center;
+
+    width: calc(var(--base-resolution-width) - 150px);
+    margin: 20px auto 70px;
+}
+
+.align:nth-of-type(2) { align-items: flex-start; text-align: left; }
+.align:nth-of-type(2) .title { margin-bottom: 10px; }
+.align:nth-of-type(2) .text { text-align: left; }
+
+.align:nth-of-type(2) > div:last-of-type { margin-top: 20px; }
+.subtitle {
+    font-size: 1.5rem;
+    color: var(--light-text-color);
+    font-family: 'Fredoka';
+    font-weight: bold;
+}
+
+/* ------------------------- TOPICOS --------------------------- */
+.align:nth-of-type(3) { margin-bottom: 0; }
+.align:nth-of-type(3) .title { margin-bottom: 10px; }
+.align:nth-of-type(3) .text { width: 80%; }
+
+.align:nth-of-type(4) {
+    width: var(--base-resolution-width);
+    flex-direction: row; justify-content: space-between;
+    margin-top: 50px;
+    margin-bottom: 60px;
+}
+
+.align-items {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 370px;
+}
+
+.item { width: 350px; }
+.item .title { font-size: 1.5rem; margin-bottom: 0; }
+.item .text { font-size: 1rem; }
+
+.item .icon {
+    display: flex;
+    justify-content: center; align-items: center;
+    margin-bottom: 15px;
+}
+.item .icon img { width: 50px; height: 50px; }
+
+.align:nth-of-type(5) {
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+/* =============================================================================================
+                             --- Media Query para Desktop Menores ---
+============================================================================================= */
+@media (max-width: 1366px) and (min-width: 981px) {
+    /* -------------------------- BANNER --------------------------- */
+    .fundo-introducao { padding: 60px calc(50vw - 300px); height: 300px; }
+    
+    /* ------------------------- TOPICOS --------------------------- */
+    .align:nth-of-type(4) { margin-bottom: 30px; }
+
+    .align:nth-of-type(4) > div:nth-of-type(2) img { width: 30vw; max-width: 350px; }
+    .item { width: 25vw; }
+
+    .align:nth-of-type(5) { margin-bottom: 60px; }
+}
+
+/* =============================================================================================
+                                --- Media Query para Celulares ---
+============================================================================================= */
+@media (max-width: 980px) {
+    /* ------------------- INFORMACAO PRINCIPAL -------------------- */
     .align {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
+        width: calc(var(--base-resolution-width) - 50px);
+        max-width: 600px;
+        margin: 20px auto 60px;
     }
-
-    .align-items {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-        height: 364px;
-    }
-
+    
     .fundo-introducao {
-        color: white;
-        background-image: url("../images/Group 53.jpg");
-        height: 303px;
-        background-size: 100% 100%;
-        background-repeat: no-repeat;
-        justify-content: left;
-        padding-top: 30px;
+        height: calc(375px - 15vw);
+        padding: 40px calc(25vw - 50px);
+        background-size: cover; background-position: center;
+    }
+    
+    /* ------------------------- TOPICOS --------------------------- */
+    .align:nth-of-type(3) .text { width: 100%; }
+
+    .align:nth-of-type(4) { flex-wrap: wrap; justify-content: center; row-gap: 40px; }
+    .align:nth-of-type(4) > div:nth-of-type(2) img { width: clamp(230px, 40vw, 350px); }
+
+    .item { width: 45%; }
+    .align-items {
+        flex-direction: row;
+        height: auto !important;
+        width: 100%;
+    }
+    .align-items:nth-of-type(3) { justify-content: space-between; }
+
+    /* --- SEÇÃO 1: INTRODUÇÃO (Banner) --- */
+    /* Anula as larguras fixas do texto do banner */
+    .fundo-introducao .title[style*="width: 549px"],
+    .fundo-introducao .text[style*="width: 549px"] {
+        width: 100% !important;
+        text-align: center !important;
+        /* Garante centralização */
     }
 
-    .icon {
-        display: flex;
+    /* --- SEÇÃO 2: TEXTO PRINCIPAL --- */
+    /* Alvo: <div class="align" style="margin-top: 100px;"> */
+    .align[style*="margin-top: 100px"] {
+        margin-top: 50px;
+        margin-left: 2rem;
+        margin-right: 2rem;
+        /* Reduz a margem */
+    }
+
+    /* Anula as larguras fixas de 1013px */
+    div[style*="width: 1013px"] {
+        width: 90% !important;
+    }
+
+    p[style*="width: 1013px"] {
+        width: 100% !important;
+        /* O <div> pai já tem 90% */
+        text-align: left !important;
+        /* 'Justify' fica ruim no mobile */
+    }
+
+    /* Garante que o título e subtítulo fiquem à esquerda */
+    div[style*="width: 1013px"] .title,
+    div[style*="width: 1013px"] .subtitle {
+        text-align: left !important;
+    }
+
+    /* --- SEÇÃO 3: TÍTULO "CARACTERÍSTICAS" --- */
+    /* Alvo: <div class="align" style="color: #00296B..."> */
+    .align[style*="color: #00296B"] {
+        padding: 0 20px;
+        margin-top: 50px;
+    }
+
+    /* Anula a largura fixa do texto */
+    .align[style*="color: #00296B"] .title[style*="width: 549px"],
+    .align[style*="color: #00296B"] .text[style*="width: 549px"] {
+        width: 100% !important;
+        text-align: center !important;
+        /* Centraliza o texto */
+    }
+
+    /* --- SEÇÃO 4 e 5: CARACTERÍSTICAS (Itens) --- */
+
+    /* Alvo: Os dois <div class="align" style="flex-direction: row..."> */
+    /* Isso empilha os blocos de itens e a imagem */
+    .align[style*="flex-direction: row"] {
+        flex-direction: column !important;
+        /* ANULA o style inline */
+        padding: 0 20px;
+        gap: 30px;
+        margin-top: 50px;
+    }
+
+    .align[style*="flex-direction: row"] img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    /* Empilha o ícone e o texto de CADA item */
+    .item {
+        flex-direction: column;
+        /* Empilha o ícone/texto */
         align-items: center;
-        justify-content: center;
+        /* Centraliza */
     }
 
-    .text-item {
-        margin-left: 20px;
+    .item .text-item {
+        margin-left: 0;
+        /* Remove margem esquerda */
+        margin-top: 10px;
+        /* Adiciona margem acima do texto */
     }
 
-    /* =============================================================
-   --- Media Query (Telas Pequenas) ---
-============================================================= */
-
-    @media (max-width: 768px) {
-
-        /* --- GERAL --- */
-        body {
-            overflow-x: hidden;
-        }
-
-        .title {
-            font-size: 30px;
-            /* Reduz o título */
-            line-height: 1.2;
-        }
-
-        .subtitle {
-            font-size: 22px;
-            /* Reduz o subtítulo */
-        }
-
-        /* --- SEÇÃO 1: INTRODUÇÃO (Banner) --- */
-        .fundo-introducao {
-            height: auto;
-            /* Altura automática */
-            padding: 40px 20px;
-            background-size: cover;
-            /* Cobre a tela, não distorce */
-            background-position: center;
-            /* O 'align-items: center' da classe .align vai centralizar o texto */
-        }
-
-        /* Anula as larguras fixas do texto do banner */
-        .fundo-introducao .title[style*="width: 549px"],
-        .fundo-introducao .text[style*="width: 549px"] {
-            width: 100% !important;
-            text-align: center !important;
-            /* Garante centralização */
-        }
-
-        /* --- SEÇÃO 2: TEXTO PRINCIPAL --- */
-        /* Alvo: <div class="align" style="margin-top: 100px;"> */
-        .align[style*="margin-top: 100px"] {
-            margin-top: 50px;
-            margin-left: 2rem;
-            margin-right: 2rem;
-            /* Reduz a margem */
-        }
-
-        /* Anula as larguras fixas de 1013px */
-        div[style*="width: 1013px"] {
-            width: 90% !important;
-        }
-
-        p[style*="width: 1013px"] {
-            width: 100% !important;
-            /* O <div> pai já tem 90% */
-            text-align: left !important;
-            /* 'Justify' fica ruim no mobile */
-        }
-
-        /* Garante que o título e subtítulo fiquem à esquerda */
-        div[style*="width: 1013px"] .title,
-        div[style*="width: 1013px"] .subtitle {
-            text-align: left !important;
-        }
-
-        /* --- SEÇÃO 3: TÍTULO "CARACTERÍSTICAS" --- */
-        /* Alvo: <div class="align" style="color: #00296B..."> */
-        .align[style*="color: #00296B"] {
-            padding: 0 20px;
-            margin-top: 50px;
-        }
-
-        /* Anula a largura fixa do texto */
-        .align[style*="color: #00296B"] .title[style*="width: 549px"],
-        .align[style*="color: #00296B"] .text[style*="width: 549px"] {
-            width: 100% !important;
-            text-align: center !important;
-            /* Centraliza o texto */
-        }
-
-        /* --- SEÇÃO 4 e 5: CARACTERÍSTICAS (Itens) --- */
-
-        /* Alvo: Os dois <div class="align" style="flex-direction: row..."> */
-        /* Isso empilha os blocos de itens e a imagem */
-        .align[style*="flex-direction: row"] {
-            flex-direction: column !important;
-            /* ANULA o style inline */
-            padding: 0 20px;
-            gap: 30px;
-            margin-top: 50px;
-        }
-
-        .align[style*="flex-direction: row"] img {
-            max-width: 100%;
-            height: auto;
-        }
-
-        /* Remove a altura fixa dos containers de itens */
-        .align-items {
-            height: auto !important;
-            gap: 30px;
-            /* Adiciona espaço entre os itens empilhados */
-            width: 100%;
-        }
-
-        /* Empilha o ícone e o texto de CADA item */
-        .item {
-            flex-direction: column;
-            /* Empilha o ícone/texto */
-            align-items: center;
-            /* Centraliza */
-        }
-
-        .item .text-item {
-            margin-left: 0;
-            /* Remove margem esquerda */
-            margin-top: 10px;
-            /* Adiciona margem acima do texto */
-        }
-
-        /* Centraliza o texto do item */
-        .item .text {
-            text-align: center !important;
-        }
+    /* Centraliza o texto do item */
+    .item .text {
+        text-align: center !important;
     }
+}
