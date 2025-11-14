@@ -7,8 +7,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
 
 /* -------------------------- BANNER --------------------------- */
-.banner { position: relative; }
-.banner img { width: 100vw; height: 700px; }
+.banner {
+    position: relative;
+    background-image: url(../images/bg_banner.png);
+    height: 700px;
+    display: flex;
+    align-items: center;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
 
 .text-banner {
     position: absolute;
@@ -129,6 +136,8 @@ section:first-of-type {
     gap: 35px;
 }
 
+.bubble:nth-of-type(even) > img { margin-top: 50px; }
+
 /* -------------------- TABELA DE CURSOS ----------------------- */
 .educacao {
     padding: 40px 0 60px; margin-top: -60px;
@@ -240,6 +249,8 @@ section:first-of-type {
     /* ------------------ INFORMAÇÕES DA ESCOLA -------------------- */
     .escola { column-gap: 5vw; }
     .escola .icone-flutuante:nth-of-type(4) { width: 85px; right: 30px; }
+    .escola .img img { width: 40vw; max-width: 450px; }
+    .text-aleatorio { margin-top: 70px; }
 
     /* ----------------- CARTÕES DE INFO RÁPIDOS ------------------- */
     .item { width: 40%; }
@@ -263,52 +274,87 @@ section:first-of-type {
     .card > div:nth-of-type(2) { padding: 80px 25px 20px; }
 
     /* ------------------------ MATRICULA -------------------------- */
-
-
-
-}
-
-/* =============================================================================================
-                                 --- Media Query para Tablets ---
-============================================================================================= */
-@media (max-width: 980px) and (min-width: 769px) {
-    :root { --base-resolution-width: 90vw; }
-    html { font-size: 15px; }
-
-    .escola { column-gap: 5vw; }
 }
 
 /* =============================================================================================
                                 --- Media Query para Celulares ---
 ============================================================================================= */
-@media (max-width: 768px) {
+@media (max-width: 980px) {
+    /* -------------------------- BANNER --------------------------- */
+    .banner {
+        height: 500px;
+        padding: 40px 20px;
+        background-size: cover; background-position: center;
+    }
+
+    .text-banner {
+        width: 80vw;
+        margin-left: 0;
+        text-align: center;
+        top: calc(16vw - 20px);
+    }
+
+    /* ------------------ INFORMAÇÕES DA ESCOLA -------------------- */
+    .title { text-align: center; }
+
+    .escola { max-width: 600px; }
+    .btn-historia { margin: 30px auto 0; padding: 10px 30px; }
+    .text-aleatorio { margin-top: 60px; }
+
+    section:first-of-type { max-width: 600px; }
+    .sistema-ensino {
+        width: 90%;
+        gap: 30px;
+        margin: 50px auto 0;
+    }
+
+    .item {
+        width: 40%;
+        flex-direction: column; align-items: center;
+        text-align: center;
+        flex-grow: 1;
+    }
+
+    /* ----------------- CARTÕES DE INFO RÁPIDOS ------------------- */
+
+
+    /* ------------------- BOLHAS DE INFORMACAO -------------------- */
+    .valores > div:nth-of-type(1) img { display: none; }
+
+    .bubbles {
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        width: 90%;
+        gap: 1vw;
+    }
+    .bubble > img { width: 120px; }
+    .bubble:nth-of-type(even) > img { margin-top: 35px; }
+
+    /* -------------------- TABELA DE CURSOS ----------------------- */
+    .educacao { 
+        background-size: cover;
+        margin-top: -30px; padding: 100px 20px 50px; 
+    }
+    .educacao > div { flex-direction: column; row-gap: 50px; }
+
+    .card { width: 90vw; }
+    .infos-infantil, .infos-fundamental {
+        width: 95%;
+        margin-left: auto; margin-right: auto;
+    }
+
+    .lista .icon img { width: 30px; height: 30px; }
+
+    /* ------------------------ MATRICULA -------------------------- */
+    /* -------------------- DEMAIS RESPONSIVO ---------------------- */
+
+    .escola { column-gap: 5vw; }
+
     body {
         overflow-x: hidden;
     }
 
-    .title {
-        font-size: 28px;
-        line-height: 1.2;
-    }
-
-    .desc {
-        font-size: 16px;
-    }
-
     /* --- BANNER --- */
-    .banner {
-        height: auto;
-        padding: 40px 20px;
-        background-size: cover;
-        background-position: center;
-    }
-
-    .text-banner {
-        width: 100%;
-        margin-left: 0;
-        text-align: center;
-    }
-
     .text-banner p[style*="font-size: 38px"] {
         font-size: 26px !important;
         line-height: 1.3;
@@ -344,51 +390,12 @@ section:first-of-type {
     }
 
     /* --- SISTEMA DE ENSINO --- */
-    .sistema-ensino {
-        flex-direction: column;
-        width: 90%;
-        gap: 30px;
-        margin-top: 50px;
-    }
-
-    .item {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
-
     .text-item {
         margin-left: 0;
         margin-top: 10px;
     }
 
-    /* --- VALORES (BUBBLES) --- */
-    .bubbles {
-        flex-wrap: wrap;
-        justify-content: center;
-        padding: 0 20px;
-    }
-
-    .valores div[style*="z-index: -1"] {
-        display: none;
-    }
-
-    /* --- SEÇÃO EDUCAÇÃO (Infantil e Fundamental) --- */
-    .educacao {
-        flex-direction: column;
-        padding: 75px 20px 30px;
-        gap: 50px;
-        background-size: cover;
-    }
-
-    .infos-infantil,
-    .infos-fundamental {
-        width: 95%;
-        max-width: 317px;
-        margin-left: auto;
-        margin-right: auto;
-    }
-
+    /* --- SEÇÃO EDUCAÇÃO (Infantil e Fundamental) --- */    
     .fundamental .infos-fundamental {
         margin-top: -70px;
     }
