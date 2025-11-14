@@ -17,6 +17,31 @@
     background-repeat: no-repeat;
 }
 
+.text-banner {
+    display: flex;
+    color: var(--neutral-text-color);
+    position: relative;
+}
+
+.text-banner div { width: 550px; }
+.text-banner .title { font-size: 2.4rem; margin-bottom: 20px; }
+.text-banner .text { font-size: 1.1rem; text-align: center; }
+
+.text-banner img:first-of-type { 
+    width: 145px;
+    height: fit-content;
+    transform: rotate(5deg);
+    margin-right: -25px;
+}
+
+.text-banner img:nth-of-type(2) { 
+    width: 120px;
+    height: fit-content;
+    transform: rotate(35deg);
+    margin-left: -30px;
+    margin-top: 20px;
+}
+
 /* ------------------------- HISTÓRIA -------------------------- */
 .box-historia {
     width: calc(var(--base-resolution-width) - 150px); 
@@ -159,18 +184,10 @@
     font-size: 1.05rem; margin-top: 20px;
 }
 
-.text-banner {
-    display: flex;
-    width: 555px;
-    color: white;
-}
-
 /* =============================================================================================
                              --- Media Query para Desktop Menores ---
 ============================================================================================= */
 @media (max-width: 1366px) and (min-width: 981px) {
-    /* -------------------------- BANNER --------------------------- */
-    /* ------------------------- HISTÓRIA -------------------------- */
     /* ---------------------- LINHA DO TEMPO ----------------------- */
     .timeline { margin: 20px 46% 20px 51%; }
     .container::after {
@@ -183,7 +200,6 @@
     .mvv { background-size: 100% 105%; padding: 180px 0 60px; column-gap: 30px; }
     .mvv .topic { width: 27%; padding: 40px 20px; }
     .mvv .topic img { margin: -90px auto 0; }
-    /* -------------------- DEMAIS RESPONSIVO ---------------------- */
 }
 
 /* =============================================================================================
@@ -191,9 +207,29 @@
 ============================================================================================= */
 @media screen and (max-width: 980px) {
     /* -------------------------- BANNER --------------------------- */
+    .banner { 
+        height: 400px;
+        background-size: cover; background-repeat: no-repeat; background-position: 50% 50%; 
+    }
+
+    .text-banner div { width: calc(var(--base-resolution-width) - 100px); max-width: 500px; }
+
+    .text-banner img:first-of-type { 
+        position: absolute;
+        left: -80px; top: -40px;
+        width: 105px;
+        transform: rotate(325deg);
+    }
+
+    .text-banner img:nth-of-type(2) {
+        position: absolute;
+        right: -65px; top: -45px;
+        width: 90px;
+        transform: rotate(65deg);
+    }
+
     /* ------------------------- HISTÓRIA -------------------------- */
-    .box-historia { width: var(--base-resolution-width); max-width: 600px; }
-    .box-historia .text { text-align: center; }
+    .box-historia { width: calc(var(--base-resolution-width) - 50px); max-width: 600px; }
 
     /* ---------------------- LINHA DO TEMPO ----------------------- */
     .align { margin-top: 50px; }

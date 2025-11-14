@@ -176,7 +176,7 @@ section:first-of-type {
 }
 
 .lista > ul {
-    display: flex; flex-wrap: wrap;
+    display: flex; flex-flow: column wrap;
     justify-content: center; align-items: center;
     row-gap: 20px;
     margin-top: 20px;
@@ -201,24 +201,20 @@ section:first-of-type {
 .fotos-escola-matricula {
     background-image: url("../images/bg_black_line.png");
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
-    padding-top: 20px;
-    padding-left: 10%;
-    padding-bottom: 20px;
+    padding: 40px 0;
+
+    width: var(--base-resolution-width);
+    background-size: 100% 100%;
+    margin: auto;
 }
 
-.foto {
-    width: 221px;
-    height: 192px;
-}
+.fotos { width: 170px; }
+.foto { width: 220px; height: 190px; }
+.foto img { width: 100%; height: 100%; border-radius: 15px; }
 
-.foto img {
-    width: 100%;
-    height: 100%;
-    border-radius: 20px;
-}
-
+.fotos-escola-matricula .btn-historia { width: fit-content; margin: 30px auto 0; }
 
 .hamburger-icon {
     display: none;
@@ -274,6 +270,46 @@ section:first-of-type {
     .card > div:nth-of-type(2) { padding: 80px 25px 20px; }
 
     /* ------------------------ MATRICULA -------------------------- */
+    .fotos { width: 100px; }
+    .fotos:first-of-type .foto:first-of-type {         
+        width: 150px !important;
+        height: 150px !important;
+        margin-left: calc(-25vw + 215px) !important; 
+    }
+    .fotos:first-of-type .foto:nth-of-type(2) {
+        width: 170px !important;
+        height: 170px !important;
+        margin-left: calc(-25vw + 135px) !important;
+        margin-top: 40px !important;
+    }
+    .fotos:first-of-type .foto:nth-of-type(3) {
+        width: 205px !important;
+        height: 170px !important;
+        margin-left: calc(-25vw + 215px) !important;
+        margin-top: -75px !important;
+    }
+
+    .fotos:nth-of-type(3) .foto:first-of-type {         
+        width: 205px !important;
+        height: 135px !important;
+        margin-left: calc(25vw - 265px) !important;
+        margin-right: calc(-25vw + 265px) !important;
+        margin-top: 20px !important;
+    }
+    .fotos:nth-of-type(3) .foto:nth-of-type(2) {
+        width: 190px !important;
+        height: 170px !important;
+        margin-left: calc(25vw - 225px) !important;
+        margin-right: calc(-25vw + 225px) !important;
+        margin-top: -30px !important;
+    }
+    .fotos:nth-of-type(3) .foto:nth-of-type(3) {
+        width: 180px !important;
+        height: 160px !important;
+        margin-left: calc(25vw - 305px) !important;
+        margin-right: calc(-25vw + 305px) !important;
+        margin-top: 20px !important;
+    }
 }
 
 /* =============================================================================================
@@ -319,6 +355,7 @@ section:first-of-type {
 
 
     /* ------------------- BOLHAS DE INFORMACAO -------------------- */
+    .valores { margin: 50px 0 20px; }
     .valores > div:nth-of-type(1) img { display: none; }
 
     .bubbles {
@@ -337,9 +374,10 @@ section:first-of-type {
     }
     .educacao > div { flex-direction: column; row-gap: 50px; }
 
+    .lista > ul { row-gap: 10px; }
     .card { width: 90vw; }
     .infos-infantil, .infos-fundamental {
-        width: 95%;
+        width: 95%; max-width: 600px;
         margin-left: auto; margin-right: auto;
     }
 
