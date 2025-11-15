@@ -318,7 +318,7 @@ section:first-of-type {
 @media (max-width: 980px) {
     /* -------------------------- BANNER --------------------------- */
     .banner {
-        height: 500px;
+        height: 540px;
         padding: 40px 20px;
         background-size: cover; background-position: center;
     }
@@ -327,7 +327,7 @@ section:first-of-type {
         width: 80vw;
         margin-left: 0;
         text-align: center;
-        top: calc(16vw - 20px);
+        left: 8%; top: calc(20vw - 25px);
     }
 
     /* ------------------ INFORMAÇÕES DA ESCOLA -------------------- */
