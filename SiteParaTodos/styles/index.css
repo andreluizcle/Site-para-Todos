@@ -510,7 +510,7 @@ section:first-of-type {
 /* =============================================================================================
                             --- Media Query para Celulares Pequenos ---
 ============================================================================================= */
-@media (max-width: 600px) {
+@media (max-width: 650px) {
     .escola .icone-flutuante:nth-of-type(1),
     .escola .icone-flutuante:nth-of-type(3),
     .escola .icone-flutuante:nth-of-type(4),

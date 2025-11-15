@@ -44,9 +44,16 @@
 
 /* ------------------------- HISTÓRIA -------------------------- */
 .box-historia {
+    position: relative;
     width: calc(var(--base-resolution-width) - 150px); 
     margin: 30px auto 0;
 }
+
+.icone-flutuante { position: absolute; }
+.box-historia .icone-flutuante:nth-of-type(1) { width: 100px; top: -50px; left: 40px; }
+.box-historia .icone-flutuante:nth-of-type(2) { width: 150px; bottom: -110px; left: -200px; }
+.box-historia .icone-flutuante:nth-of-type(3) { width: 70px; top: 30px; right: calc(-20vw + 210px); }
+.box-historia .icone-flutuante:nth-of-type(4) { width: 100px; bottom: -140px; right: 70px; }
 
 .title { 
     color: var(--third-color);
@@ -76,6 +83,10 @@
     max-width: var(--base-resolution-width);
     margin: 20px 48% 20px 51%;
 }
+
+.timeline .icone-flutuante:nth-of-type(1) { width: 100px; top: 200px; right: calc(-20vw + 100px); }
+.timeline .icone-flutuante:nth-of-type(2) { width: 120px; bottom: 180px; left: calc(-18vw); }
+.timeline .icone-flutuante:nth-of-type(3) { width: 70px; bottom: 80px; right: calc(-25vw + 210px); }
 
 .timeline::after {
     content: '';
@@ -188,6 +199,10 @@
                              --- Media Query para Desktop Menores ---
 ============================================================================================= */
 @media (max-width: 1366px) and (min-width: 981px) {
+    /* ------------------------- HISTÓRIA -------------------------- */
+    .box-historia .icone-flutuante:nth-of-type(1) { width: 90px; top: -35px; left: -10px; }
+    .box-historia .icone-flutuante:nth-of-type(3) { top: -25px; right: calc(-20vw + 190px); }
+
     /* ---------------------- LINHA DO TEMPO ----------------------- */
     .timeline { margin: 20px 46% 20px 51%; }
     .container::after {
@@ -195,6 +210,8 @@
         top: 45px;
     }
     .right::after { left: -10px; }
+
+    .timeline .icone-flutuante:nth-of-type(1) { width: 90px; top: 200px; right: calc(-20vw + 65px); }
 
     /* ----------------- MISSÃO, VISÃO E VALORES ------------------- */
     .mvv { background-size: 100% 105%; padding: 180px 0 60px; column-gap: 30px; }
@@ -231,6 +248,10 @@
     /* ------------------------- HISTÓRIA -------------------------- */
     .box-historia { width: calc(var(--base-resolution-width) - 50px); max-width: 600px; }
 
+    .box-historia .icone-flutuante:nth-of-type(1) { width: 90px; top: -50px; left: -60px; }
+    .box-historia .icone-flutuante:nth-of-type(3) { width: 70px; top: -20px; right: calc(-20vw + 100px); }
+    .box-historia .icone-flutuante:nth-of-type(4) { bottom: -110px; right: 15px; }
+
     /* ---------------------- LINHA DO TEMPO ----------------------- */
     .align { margin-top: 50px; }
     .timeline { margin: 20px 46% 20px 53%; }
@@ -241,6 +262,9 @@
 
     .container::after { width: 80px; height: 80px; top: 45px; }
     .right::after { left: 25px;}
+
+    .timeline .icone-flutuante:nth-of-type(1) { right: calc(-20vw + 90px); }
+    .timeline .icone-flutuante:nth-of-type(3) { display: none; }
 
     /* ----------------- MISSÃO, VISÃO E VALORES ------------------- */
     .mvv { 
@@ -388,5 +412,20 @@
     /* Anula o style inline 'width: 878px' do parágrafo */
     .content .text[style*="width: 878px"] {
         width: 100% !important;
+    }
+}
+
+/* =============================================================================================
+                            --- Media Query para Celulares Pequenos ---
+============================================================================================= */
+@media (max-width: 650px) {
+    .box-historia .icone-flutuante:nth-of-type(1),
+    .box-historia .icone-flutuante:nth-of-type(2),
+    .box-historia .icone-flutuante:nth-of-type(3),
+    .box-historia .icone-flutuante:nth-of-type(4),
+    .timeline .icone-flutuante:nth-of-type(1),
+    .timeline .icone-flutuante:nth-of-type(2),
+    .timeline .icone-flutuante:nth-of-type(3) {
+        display: none;
     }
 }
