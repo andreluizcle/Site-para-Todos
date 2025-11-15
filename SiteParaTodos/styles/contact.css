@@ -71,6 +71,7 @@ main .align:nth-of-type(2) > div:first-of-type { width: 55%; }
     display: flex;
     align-items: center;
 }
+.icon img { width: 55px; height: 55px; }
 
 iframe {
     border: 0; border-radius: 20px;
@@ -102,7 +103,7 @@ iframe {
     justify-content: center;
     margin: 10px auto 60px;
 }
-.align:nth-of-type(5) .btn-conhecer { padding: 12px 50px; }
+.align:nth-of-type(5) .btn-conhecer { padding: 12px 45px; }
 
 /* =============================================================================================
                              --- Media Query para Desktop Menores ---
@@ -160,7 +161,7 @@ iframe {
     .align:nth-of-type(3) .text { width: 100%; }
     .galeria-imagem { gap: 30px 35px; margin-bottom: 0;}
     .img-size { width: 250px; height: 250px; }
-    .align:nth-of-type(5) .btn-conhecer { padding: 10px 45px; }
+    .align:nth-of-type(5) .btn-conhecer { padding: 10px 40px; }
 
     /* -------------------- DEMAIS RESPONSIVO ---------------------- */
     body {
