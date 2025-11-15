@@ -43,10 +43,10 @@
     margin: 50px auto 0;
 }
 
-.escola .icone-flutuante { position: absolute; }
+.icone-flutuante { position: absolute; }
 .escola .icone-flutuante:nth-of-type(1) { width: 90px; top: -50px; left: -35px; }
 .escola .icone-flutuante:nth-of-type(2) { width: 110px; bottom: 50px; left: -200px; }
-.escola .icone-flutuante:nth-of-type(3) { width: 70px; top: -15px; right: -130px; }
+.escola .icone-flutuante:nth-of-type(3) { width: 70px; top: -50px; right: calc(-20vw + 250px); }
 .escola .icone-flutuante:nth-of-type(4) { width: 90px; bottom: -30px; right: 145px; }
 
 .text-escola { width: 600px; }
@@ -89,6 +89,12 @@
 }
 
 /* ----------------- CARTÕES DE INFO RÁPIDOS ------------------- */
+section { position: relative; }
+section .icone-flutuante:nth-of-type(1) { width: 115px; top: -50px; left: 30px; }
+section .icone-flutuante:nth-of-type(2) { width: 80px; bottom: 50px; left: calc(-33vw + 380px); }
+section .icone-flutuante:nth-of-type(3) { width: 120px; top: 30px; right: calc(-30vw + 440px); }
+section .icone-flutuante:nth-of-type(4) { width: 65px; bottom: -85px; right: calc(-25vw + 305px); }
+
 section:first-of-type {
     width: var(--base-resolution-width); 
     margin: auto;
@@ -248,8 +254,14 @@ section:first-of-type {
     .escola .img img { width: 40vw; max-width: 450px; }
     .text-aleatorio { margin-top: 70px; }
 
+    .escola .icone-flutuante:nth-of-type(3) { display: none; }
+
     /* ----------------- CARTÕES DE INFO RÁPIDOS ------------------- */
     .item { width: 40%; }
+    section .icone-flutuante:nth-of-type(1) { width: 115px; top: -35px; left: 15px; }
+    section .icone-flutuante:nth-of-type(2) { display: none; }
+    section .icone-flutuante:nth-of-type(3) { width: 120px; top: 30px; right: calc(-13vw + 180px); }
+    section .icone-flutuante:nth-of-type(4) { bottom: -75px; right: calc(-5vw + 305px); }
 
     /* ------------------- BOLHAS DE INFORMACAO -------------------- */
     .valores { margin-top: 65px; }
@@ -333,6 +345,11 @@ section:first-of-type {
     /* ------------------ INFORMAÇÕES DA ESCOLA -------------------- */
     .title { text-align: center; }
 
+    .escola .icone-flutuante:nth-of-type(1) { top: -35px; left: -10px; }
+    .escola .icone-flutuante:nth-of-type(2) { width: 100px; bottom: 70px; left: -150px; }
+    .escola .icone-flutuante:nth-of-type(3) { right: 20px; }
+    .escola .icone-flutuante:nth-of-type(4) { width: 80px; right: 75px; }
+
     .escola { max-width: 600px; }
     .btn-historia { margin: 30px auto 0; padding: 10px 30px; }
     .text-aleatorio { margin-top: 60px; }
@@ -352,7 +369,12 @@ section:first-of-type {
     }
 
     /* ----------------- CARTÕES DE INFO RÁPIDOS ------------------- */
-
+    section .icone-flutuante:nth-of-type(1) { top: 300px; left: -80px; }
+    section .icone-flutuante:nth-of-type(3) { top: 65px; right: calc(-20vw + 100px); }
+    section .icone-flutuante:nth-of-type(2),
+    section .icone-flutuante:nth-of-type(4) {
+        display: none;
+    }
 
     /* ------------------- BOLHAS DE INFORMACAO -------------------- */
     .valores { margin: 50px 0 20px; }
@@ -482,5 +504,18 @@ section:first-of-type {
 
     .navigation ul li:last-child {
         margin-left: 0px;
+    }
+}
+
+/* =============================================================================================
+                            --- Media Query para Celulares Pequenos ---
+============================================================================================= */
+@media (max-width: 600px) {
+    .escola .icone-flutuante:nth-of-type(1),
+    .escola .icone-flutuante:nth-of-type(3),
+    .escola .icone-flutuante:nth-of-type(4),
+    section .icone-flutuante:nth-of-type(1),
+    section .icone-flutuante:nth-of-type(3) {
+        display: none;
     }
 }
