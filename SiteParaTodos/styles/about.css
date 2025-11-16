@@ -118,7 +118,6 @@
 }
 
 .container::after {
-    content: '1945';
     color: white;
     display: flex;
     align-items: center;
@@ -137,6 +136,16 @@
     font-weight: 700;
     text-align: center;
     line-height: 45px;
+}
+
+.container-content1::after{
+    content: '1997';    
+}
+.container-content2::after{
+    content: '2012';    
+}
+.container-content3::after{
+    content: '2013';    
 }
 
 .right::before {
