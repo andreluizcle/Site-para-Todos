@@ -1,7 +1,6 @@
 # 🏫 Colégio Recreando - Site Oficial
 
 ![Status do Projeto](https://img.shields.io/badge/Status-Online-brightgreen)
-![License](https://img.shields.io/badge/License-MIT-blue)
 
 Este é o repositório do site oficial do **Colégio Recreando**. O projeto foi desenvolvido para fornecer informações claras e acessíveis a pais, alunos e colaboradores, servindo como uma vitrine digital para a proposta pedagógica da escola.
 
