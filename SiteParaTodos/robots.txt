@@ -1,0 +1,3 @@
+User-agent: *
+Disallow:
+Sitemap: https://colegiorecreando.com.br/sitemap.xml
